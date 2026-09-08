@@ -12,3 +12,23 @@ p {
   font-family: verdana;
   font-size: 20px;
 }
+
+/* unvisited link */
+a:link {
+  color: dark pink;
+}
+
+/* visited link */
+a:visited {
+  color: dark pink;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: dark pink;
+}
