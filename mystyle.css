@@ -1,13 +1,9 @@
 body {
-  background colour: ;
-  }
-  
-body {
-  background-color: lightblue;
+   background-color: "#ADCFF7";
 }
-
+  
 h1 {
-  color: white;
+  color: dark blue;
   text-align: center;
 }
 
@@ -18,20 +14,20 @@ p {
 
 /* unvisited link */
 a:link {
-  color: dark pink;
+  color: dark blue;
 }
 
 /* visited link */
 a:visited {
-  color: dark pink;
+  color: dark blue;
 }
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
+  color: blue;
 }
 
 /* selected link */
 a:active {
-  color: dark pink;
+  color: dark blue;
 }
