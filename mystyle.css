@@ -24,10 +24,10 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
+  color: red;
 }
 
 /* selected link */
 a:active {
-  color: dark blue;
+  color: dark pink;
 }
