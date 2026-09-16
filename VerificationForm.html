@@ -1,0 +1,81 @@
+<html>
+<head>
+<script>
+function validateForm() {
+    var username = document.forms["myForm"]["username"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var password = document.forms["myForm"]["password"].value;
+    var confirmPassword = document.forms["myForm"]["confirm_password"].value;
+
+    //presence check
+    if (username == null || username == "") {
+        alert("Username must be filled out!");
+        return false;
+    }
+
+    //presence check
+    if (email == null || email == "") {
+        alert("Email must be filled out!");
+        return false;
+    }
+
+
+    //presence check
+    if (password == null || password == "") {
+        alert("Password must be filled out!");
+        return false;
+    }
+
+    //Does password match
+    if (password != confirmPassword) {
+        alert("Passwords do not match!");
+        return false;
+    }
+
+        var foundAt = 0;
+    var foundDot = 0;
+
+    //looking for @ and . in the email address
+    for(i=0; i<email.length;i++)
+    {
+        if(email[i] == "@"){foundAt = i;}
+        if(email[i] == "."){foundDot = i;}
+    }
+
+    //valid?
+    if(foundAt > 1 && foundDot > foundAt + 3 && foundDot < email.length-2)
+    {
+        return true;
+    }
+    else
+    {
+        alert("Not a valid email address");
+        return false;
+    }
+
+    return true;
+}
+</script>
+</head>
+<body bgcolor="#AEE6AF">
+
+<h1>Simple Form Validation</h1>
+    <style>
+      h1 {
+            color: rgb(2, 71, 18);
+            font-weight: bold;
+        }
+    </style>
+<strong>
+<Form name="myForm" action="FormFound.html" onsubmit="return validateForm()">
+    <p> Username: <input type="text" id="username" name="username" value="">
+    <p>Email: <input type="text" id="email" name="email" value="">
+    <p>Password: <input type="password" id="password" name="password" value="">
+    <p>Confirm Password: <input type="password" id="confirm_password" name="confirm_password" value="">
+    <p><input type="submit" value="Submit">
+ </form>
+
+
+
+
+<!--I've linked these two pages together so that once the form is completed in "VerificationForm" it will then go to "FormFound". How do I display 
